@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let errors = [];
 
     if (!day || !month || !year) {
-        errors.push('This field is required.');
+        errors.push('All fields are required.');
     }
 
 
