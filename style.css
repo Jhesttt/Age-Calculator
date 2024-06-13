@@ -12,7 +12,6 @@ body {
     align-items: center;
     background: #F0F0F0;
     position: relative;
-    overflow: hidden;
 }
 
 #container {
@@ -199,6 +198,7 @@ h1 {
     body {
         display: block;
         margin: 0 auto;
+        overflow: hidden;
     }
 
     #container {
@@ -255,8 +255,4 @@ h1 {
     #title {
         width: 175px;
     }
-}
-
-@media all and (max-width:500px) {
-
 }
