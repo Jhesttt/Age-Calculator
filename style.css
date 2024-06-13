@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F0F0F0;
+    position: relative;
+    overflow: hidden;
+}
+
+#container {
+    background: #FFFFFF;
+    padding: 32px 32px 42px 32px;
+    border-radius: 16px 16px 108px 16px;
+}
+
+#age-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 100px;
+    grid-gap: 24px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+input, label {
+    display: block;
+}
+
+label {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+    margin-left: 2px;
+    margin-bottom: 6px;
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox
+input[type="number"] {
+    -moz-appearance: textfield;
+} */
+
+/* Additional styles to ensure consistent appearance across browsers */
+input[type="number"] {
+    appearance: textfield;
+}
+
+input {
+    width: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: solid 1px;
+    border-color: hsl(0, 0%, 86%);
+}
+
+input::placeholder {
+    color: hsl(0, 0%, 60%);
+}
+
+.errors {
+    color: hsl(0, 100%, 67%);
+    margin-left: 2px;
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.15s;
+}
+
+#btnSubmit {
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    padding: 12px 11px 8px 12px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#btnSubmit:hover {
+    background-color: rgb(167, 127, 255);
+}
+
+img {
+    width: 24px;
+    height: 22px;
+}
+
+hr {
+    border: none;
+    border-top:1px solid hsl(0, 0%, 86%);
+    margin-bottom: 32px;
+}
+
+.result {
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 800;
+    display: block;
+    margin:-20px 0;
+}
+
+.values {
+    color: hsl(259, 100%, 65%);
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.525);
+    height: 100vh;
+    width: 100vw;
+    transition: 0.15s;
+}
+
+#popUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: auto;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    opacity: 1;
+    transition: 0.15s;
+}
+
+.disappear {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 12px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#btnClose {
+    border: none;
+    background-color: white;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    justify-self: end;
+    transition: 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#btnClose:hover {
+    opacity: 0.5;
+}
+
+#list {
+    margin-top: -12px;
+}
+
+#errList {
+    list-style-position: inside;
+}
+
+@media all and (max-width: 671px) {
+    body {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #container {
+        background: #FFFFFF;
+        padding: 32px 32px 42px 32px;
+        border-radius: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #btnSubmit {
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    input {
+        width: 100%;
+    }
+
+    #age-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 24px;
+        margin-bottom: 18px;    
+        position: relative;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    #results {
+        text-align: center;
+        height: 100%;
+        margin-top: 100px;
+    }
+
+
+    .result {
+        font-size: 2.8em;
+    }
+
+    #btnSubmit {
+        scale: 80%;
+    }
+
+    #title {
+        width: 175px;
+    }
+}
+
+@media all and (max-width:500px) {
+
+}
