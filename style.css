@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F0F0F0;
+    background: hsl(259, 100%, 65%);
     position: relative;
 }
 
